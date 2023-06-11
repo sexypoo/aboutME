@@ -1,0 +1,232 @@
+body{
+    margin:0;
+    font-family: 'Fira Sans', 'Noto Sans KR', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+    padding-left:0;
+}
+
+.profile{
+    position: relative;
+    display:grid;
+    height:10em;
+    width:10em;
+    border: 10px solid white;
+    margin: 0 auto;
+    border-radius: 10em;
+    transform: translateY(-5em);
+    margin-bottom: 0;
+}
+
+.navigation-bar{
+    position: relative;
+    box-sizing: border-box;
+    width:100%;
+    height: 300px;
+    border: none;
+    background: linear-gradient(to bottom right, #20e5ff, #fffb00);
+    box-shadow: 0px 0px 50px rgb(107, 115, 117) inset;
+    font-size: 40px;
+    text-align: center;
+    line-height: 300px;
+    color: white;
+    font-style:italic;
+}
+
+.hello{
+    box-sizing: border-box;
+    background-color: rgb(241, 241, 241);
+    border-radius:1em;
+    margin: 30px;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hello>.hello-text{
+    margin: 15px;
+}
+
+.title{
+    margin: 10em;
+}
+
+.languageImg{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.languageText{
+    font-size: 40px;
+}
+
+.develop{
+    margin: 100px;
+    display:flex;
+    justify-content: center;
+}
+
+.imgBox{
+    position: relative;
+    display: block;
+    width: 10em;
+    height: 10em;
+}
+
+.box{
+    margin: 1em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:30em;
+    height: 20em;
+    box-shadow: 0px 0px 30px rgb(132, 132, 141);
+    border-radius: 3em;
+    min-height:20em;
+    min-width: 20em;
+    position:absolute;
+    background-color: white;
+}
+
+.prevToNextAnimation{
+    animation-duration: 1s;
+    animation-name: Slidein;
+}
+
+.nextToPrevAnimation{
+    animation-duration: 1s;
+    animation-name: SlideOut;
+}
+
+.button{
+    display:block;
+    position:absolute;
+    font-size:3em;
+    transform: translateY(300%);
+    width: 50px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #67ff20d5;
+    border-radius: 0.2em;
+    color:white;
+}
+.prev{
+    left:5%;
+}
+.next{
+    right:5%;
+}
+
+.icon{
+    padding: 5px;
+    display:block;
+    position: absolute;
+    color: white;
+    font-size: 0.4em;
+    height: 3em;
+    line-height:3em;
+    transform: translateY(-100%);
+    text-align: left;
+}
+
+@keyframes Slidein{
+    from{
+        opacity: 0.2;
+        margin-left:-100%;
+    }
+    to{
+        opacity: 1;
+        margin-left:1em;
+    }
+}
+
+@keyframes SlideOut{
+    from{
+        opacity: 0.2;
+        margin-right:-100%;
+    }
+    to{
+        opacity: 1;
+        margin-right:1em;
+    }
+}
+
+@keyframes GotoRight{
+    from{
+        opacity: 1;
+        margin-right:1em;
+    }
+    to{
+        opacity: 0;
+        margin-right:-100%;
+    }
+}
+
+@keyframes GotoLeft{
+    from{
+        opacity: 1;
+        margin-left:1em;
+    }
+    to{
+        opacity: 0;
+        margin-left:-100%;
+    }
+}
+
+.right{
+    animation-duration: 1s;
+    animation-name:GotoRight;
+}
+
+
+.left{
+    animation-duration: 1s;
+    animation-name:GotoLeft;
+}
+
+.text{
+    display: block;
+    margin-top:10em;
+    font-size: 3em;
+}
+
+.text:after{
+    position: inherit;
+    display: block;
+    content:"";
+    width:3em;
+    border-bottom: 3px solid #caff50d5;
+    margin: 20px auto;
+}
+
+article{
+    display:block;
+    padding:5em;
+}
+.profile-text{
+    margin: 0 auto;
+    font-size:20px;
+    transform:translateY(-50%);
+}
+
+.projects{
+    display: box;
+    font-size: 30px;
+
+}
